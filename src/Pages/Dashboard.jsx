@@ -1,6 +1,6 @@
 import React from 'react'
 
-export coh1 Dashboard =h1 => {
+export const Dashboard = () => {
   return (
     <h1>Dashboard</h1>
   )

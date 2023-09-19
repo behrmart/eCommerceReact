@@ -1,6 +1,7 @@
-import { useState } from 'react'
 import './App.css'
-import  Signup  from './Pages/Signup'
+import { Home, Dashboard, Login, Secret, Signup } from './Pages'
+
+
 
 function App() {
 
