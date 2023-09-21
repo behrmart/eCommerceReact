@@ -1,6 +1,6 @@
 
 
-$menu-color: #3d3d3d;
+$menu-color: #de51fa;
 
 //declaro mixin para reutilizar estilos
 @mixin headerlink{
@@ -14,7 +14,7 @@ $menu-color: #3d3d3d;
 }
 
 .header {
-    background-color: aquamarine;
+    background-color: rgb(110, 2, 110);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,11 +36,11 @@ $menu-color: #3d3d3d;
 
         // estilo para link activo
         &--is-active {
-            @include header-border($size: 3px)
+            @include header-border($size: 2px)
         }
 
         &:hover{
-            @include header-border
+            @include header-border($size: 1px)
         }
     }
 }

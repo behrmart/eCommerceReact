@@ -1,26 +1,29 @@
 import './Header.scss'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
+
+  const linkIsActive = (isActive) => isActive ? 'header__item-link header__item-link--is-active': 'header__item-link'
 
   // BEM para llamar clases
   return (
     <nav className="header">
-      <a className="header__logo" href="">LOGO</a>
+      <NavLink className="header__logo" to="">LOGO </NavLink>
       <ul className="header__nav-list">
         <li className="header__list-item">
-          <a className="header___item-link header__item-link--is-active" href="/home">Home</a>
+          <NavLink className={ ({isActive}) => linkIsActive(isActive)} to="/">Home</NavLink>
         </li>
         <li className="header__list-item">
-          <a className="header___item-link" href="/dashboard">Dashboard</a>
+          <NavLink className={ ({isActive}) => linkIsActive(isActive)} to="/dashboard">Dashboard</NavLink>
         </li>
         <li className="header__list-item">
-          <a className="header___item-link" href="/secret">Secret</a>
+          <NavLink className={ ({isActive}) => linkIsActive(isActive)} to="/secret">Secret</NavLink>
         </li>
         <li className="header__list-item">
-          <a className="header___item-link" href="/login">Login</a>
+          <NavLink className={ ({isActive}) => linkIsActive(isActive)} to="/login">Login</NavLink>
         </li>
         <li className="header__list-item">
-          <a className="header___item-link" href="/signup">Signup</a>
+          <NavLink className={ ({isActive}) => linkIsActive(isActive)} to="/signup">Signup</NavLink>
         </li>
       </ul>
     </nav>
