@@ -8,7 +8,7 @@ const Header = () => {
       <a className="header__logo" href="">LOGO</a>
       <ul className="header__nav-list">
         <li className="header__list-item">
-          <a className="header___item-link" href="/home">Home</a>
+          <a className="header___item-link header__item-link--is-active" href="/home">Home</a>
         </li>
         <li className="header__list-item">
           <a className="header___item-link" href="/dashboard">Dashboard</a>
