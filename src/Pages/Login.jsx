@@ -4,11 +4,15 @@ import logo from '@/assets/react.svg'
 import { useForm } from "react-hook-form";
 import { loginUserService } from '../Services/UserService';
 import { useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../Hooks/useAuthContext';
 
 export const Login = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate()
+
+  const { login } = useAuthContext()
+
   const onSubmit = async (data) => {
     try {
       const response = await loginUserService(data)
@@ -16,8 +20,9 @@ export const Login = () => {
       if (response.status == 200) {
         navigate('/')
         console.log('Usuario autenticado exitosamente')
-        localStorage.setItem('token', response.data.token) //guardar token en local storage
-        console.log(response.data.token)
+        login(response.data.token) // Usa funcion de login en useAuthContext
+        //localStorage.setItem('token', response.data.token) //guardar token en local storage
+        //console.log(response.data.token)
       }
     } catch (error) {
       console.log('Error en login ', error)
