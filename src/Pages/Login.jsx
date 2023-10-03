@@ -44,6 +44,7 @@ export const Login = () => {
           <input
             type="email"
             className="form-control"
+            name='email'
             id="floatingInput"
             placeholder="name@example.com"
             {...register('email')}
@@ -54,6 +55,7 @@ export const Login = () => {
           <input
             type="password"
             className="form-control"
+            name="password"
             id="floatingPassword"
             placeholder="Password"
             {...register('password')}
