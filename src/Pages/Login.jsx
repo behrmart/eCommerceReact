@@ -1,6 +1,6 @@
 
 import '@/Styles/Form.css'
-import logo from '@/assets/react.svg'
+import logo from '../assets/ecommerce.png'
 import { useForm } from "react-hook-form";
 import { loginUserService } from '../Services/UserService';
 import { useNavigate } from 'react-router-dom';
@@ -36,8 +36,7 @@ export const Login = () => {
           className="mb-4"
           src={logo}
           alt=""
-          width={72}
-          height={57}
+          width={110}
         />
         <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
         <div className="form-floating">
